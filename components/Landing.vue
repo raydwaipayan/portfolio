@@ -5,7 +5,7 @@
         <div class="column is-full">
           <div class="container">
             <div class="avatar">
-              <img src="~/static/images/dwaip.jpg">
+              <img src="/images/dwaip.jpg">
             </div>
           </div>
           <div class="my-5 container has-text-centered">
