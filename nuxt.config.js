@@ -9,7 +9,7 @@ function getBlog (post, _) {
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/portfolio/'
+    base: '/portfolio'
   }
 } : {}
 
