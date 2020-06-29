@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <h1 class="is-size-3">
-      Henlo random user! Welcome to Dwai Writes.
-    </h1>
-    <div v-for="post in posts" :key="post.name">
-      <nuxt-link :to="getPermalink(post.name)">
-        {{ post.name }}
-      </nuxt-link>
+  <div class="hero is-light is-fullheight">
+    <div class="container">
+      <h1 class="is-size-3">
+        Henlo random user! Welcome to Dwai Writes.
+      </h1>
+      <div v-for="post in posts" :key="post.name">
+        <nuxt-link :to="getPermalink(post.name)">
+          {{ post.name }}
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>

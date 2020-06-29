@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="px-5 py-1" type="is-light" fixed-top>
+  <b-navbar class="px-5" type="is-light" fixed-top>
     <template slot="start">
       <b-navbar-item href="https://github.com/raydwaipayan">
         <b-icon pack="fab" icon="github" size="is-large" />
@@ -29,9 +29,5 @@
 .px-5{
     padding-left: 5vw;
     padding-right: 5vw;
-}
-.py-1{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 </style>

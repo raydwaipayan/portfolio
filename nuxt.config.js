@@ -7,7 +7,14 @@ function getBlog (post, _) {
   return `/blog/${blog}`
 }
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/portfolio/'
+  }
+} : {}
+
 export default {
+  ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page

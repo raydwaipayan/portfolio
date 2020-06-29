@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-10-tablet">
-        <div class="title">{{ attributes.title}}</div>
-        <div v-html="content" class="content"></div>
+  <div class="hero is-light is-fullheight">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10-tablet">
+          <div class="title">{{ attributes.title}}</div>
+          <div v-html="content" class="content"></div>
+        </div>
       </div>
     </div>
   </div>
