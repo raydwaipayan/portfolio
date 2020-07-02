@@ -23,7 +23,8 @@
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
