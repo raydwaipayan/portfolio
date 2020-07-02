@@ -38,7 +38,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/assets/buefy.scss'
+    '~/assets/buefy.scss',
+    'vue-typed-js/dist/vue-typed-js.css'
   ],
   /*
   ** Plugins to load before mounting the App
