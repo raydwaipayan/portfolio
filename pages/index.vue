@@ -24,9 +24,17 @@ export default {
       state: 0
     }
   },
+  mounted () {
+    if (!this.$session.exists()) {
+      this.$session.start()
+    } else {
+      this.state = this.$session.get('state')
+    }
+  },
   methods: {
     increment () {
       this.state = this.state + 1
+      this.$session.set('state', this.state)
     }
   }
 }

@@ -45,7 +45,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/vue-typed.js'
+    { src: '~/plugins/vue-typed.js' },
+    { src: '~/plugins/vue-session.client.js' }
   ],
   /*
   ** Nuxt.js dev-modules

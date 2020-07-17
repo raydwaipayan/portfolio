@@ -15,7 +15,7 @@
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         About
       </b-navbar-item>
-      <b-navbar-item href="#">
+      <b-navbar-item href="/dwaipayan_cv.pdf">
         Resume
       </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ path: '/blog' }">
