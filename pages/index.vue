@@ -1,8 +1,8 @@
 <template>
-  <div v-if="state===0" class="section has-background-light">
-    <Intro1 :increment="increment" />
+  <div v-if="!state">
+    <Intro1 :change-state="changeState" />
   </div>
-  <div v-else-if="state===1" class="section has-background-light">
+  <div v-else>
     <Landing />
   </div>
 </template>
@@ -25,16 +25,19 @@ export default {
     }
   },
   mounted () {
-    if (!this.$session.exists()) {
-      this.$session.start()
-    } else {
-      this.state = this.$session.get('state')
+    const visit = this.$cookies.get('visited')
+
+    if (visit) {
+      this.state = visit === '0' ? 0 : 1
     }
+    this.$cookies.set('visited', '1', {
+      path: '/',
+      maxAge: 60 * 60 * 5
+    })
   },
   methods: {
-    increment () {
-      this.state = this.state + 1
-      this.$session.set('state', this.state)
+    changeState () {
+      this.state = !this.state
     }
   }
 }

@@ -12,10 +12,20 @@
       </b-navbar-item>
     </template>
     <template slot="end">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        About
+      <b-navbar-item>
+        <div
+          v-scroll-to="{
+            el: '#about',
+            duration: 400,
+            easing: 'linear',
+            offset: -50,
+            force: true
+          }"
+        >
+          About
+        </div>
       </b-navbar-item>
-      <b-navbar-item href="/dwaipayan_cv.pdf">
+      <b-navbar-item :href="require('../assets/dwaipayan_cv.pdf')">
         Resume
       </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ path: '/blog' }">

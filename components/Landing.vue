@@ -2,9 +2,9 @@
   <div>
     <Navbar />
     <div class="hero is-light is-fullscreen">
-      <div class="container py-av">
+      <div class="container">
         <div class="columns is-fullwidth">
-          <div class="column is-full">
+          <div class="column is-full my-5">
             <div class="container">
               <div class="avatar">
                 <img src="~/assets/dwaip.jpg">
@@ -15,7 +15,7 @@
                 Heyloo! This is Dwaipayan.
               </h1>
               <p class="is-size-5">
-                Developer | Security Enthusiast
+                Developer | Linux Enthusiast
               </p>
               <p class="is-size-5 has-text-grey">
                 pgp: <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x01bdc75808d68e0f">public key</a>
@@ -24,10 +24,33 @@
                 <p class="is-size-4 has-text-grey-dark py-more">
                   Learn more about me!
                 </p>
-                <div class="arrow-down" @click.prevent="">
+                <div
+                  v-scroll-to="{
+                    el: '#about',
+                    duration: 400,
+                    easing: 'linear',
+                    offset: -50,
+                    force: true
+                  }"
+                  class="arrow-down"
+                >
                   <b-icon pack="fas" icon="arrow-down" size="is-large" />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero is-light is-fullscreen is-fullheight">
+      <div id="about" class="container">
+        <h1 class="is-size-3 has-text-weight-semibold has-text-centered">
+          About me
+        </h1>
+        <div class="columns is-centered">
+          <div class="column is-10-desktop">
+            <div class="section">
+              <About />
             </div>
           </div>
         </div>
@@ -38,9 +61,15 @@
 
 <script>
 import Navbar from './Navbar'
+import About from './About'
 export default {
   components: {
-    Navbar
+    Navbar,
+    About
+  },
+  data () {
+    return {
+    }
   }
 }
 </script>
@@ -51,34 +80,29 @@ export default {
 .is-fullscreen{
   min-height: calc(100vh - 5.5rem);
 }
-.py-av{
-  padding-top: 24vh;
-}
 .py-more{
   padding-top: 16vh;
 }
 @media only screen and (max-width:770px){
-  .py-av{
-    padding-top: 20vh;
-  }
   .py-more{
     padding-top: 10vh;
   }
 }
 .my-5{
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 .avatar{
-    width: 14rem;
-    height: 100%;
-    position: relative;
+    max-width: 15rem;
+    height: auto;
     margin: 0 auto;
 }
 img {
-    display: block;
     border-radius: 50%;
-    position: absolute;
-    bottom: -43px;
     border: 4px solid white;
 }
+.round{
+    border-radius: 1%;
+    border: 1rem solid white;
+}
+
 </style>

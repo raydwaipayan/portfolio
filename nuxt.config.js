@@ -66,7 +66,9 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    ['vue-scrollto/nuxt', { duration: 300 }],
+    'cookie-universal-nuxt'
   ],
   buefy: {
     materialDesignIcons: false,
@@ -103,7 +105,15 @@ export default {
         test: /\.md$/,
         include: path.resolve(__dirname, 'blog'),
         use: ['raw-loader']
-      })
+      },
+      {
+        test: /\.(pdf)(\?.*)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[hash:7].[ext]'
+        }
+      }
+      )
     }
   },
   generate: {

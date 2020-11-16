@@ -18,7 +18,7 @@
             class="is-size-5"
             inverted
             outlined
-            @click.prevent="increment"
+            @click.prevent="changeState"
           >
             Enter
           </b-button>
@@ -31,7 +31,7 @@
 <script>
 export default {
   props: {
-    increment: {
+    changeState: {
       type: Function,
       default: () => {}
     }
