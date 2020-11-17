@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <p class="is-size-5">
+    <p class="is-size-5 has-text-justified">
       Hey there! I am a 3rd year CS undergrad with big dreams.
       I like working with Open Source Technologies. Currently,
       am contributing to the Linux Kernel as a part of the LKMP

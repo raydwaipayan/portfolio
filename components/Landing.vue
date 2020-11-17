@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="hero is-light is-fullscreen">
+    <div id="top" class="hero is-light is-fullscreen">
       <div class="container">
         <div class="columns is-fullwidth">
           <div class="column is-full my-5">
@@ -12,7 +12,7 @@
             </div>
             <div class="my-5 container has-text-centered">
               <h1 class="is-size-3 has-text-weight-semibold">
-                Heyloo! This is Dwaipayan.
+                Hey! This is Dwaipayan.
               </h1>
               <p class="is-size-5">
                 Developer | Linux Enthusiast
@@ -43,15 +43,13 @@
       </div>
     </div>
     <div class="hero is-light is-fullscreen is-fullheight">
-      <div id="about" class="container">
+      <div id="about" class="container pu-5">
         <h1 class="is-size-3 has-text-weight-semibold has-text-centered">
           About me
         </h1>
         <div class="columns is-centered">
           <div class="column is-10-desktop">
-            <div class="section">
-              <About />
-            </div>
+            <About />
           </div>
         </div>
       </div>
@@ -66,10 +64,6 @@ export default {
   components: {
     Navbar,
     About
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
@@ -77,29 +71,34 @@ export default {
 .arrow-down{
   cursor: pointer;
 }
+
 .is-fullscreen{
   min-height: calc(100vh - 5.5rem);
 }
+
 .py-more{
   padding-top: 16vh;
 }
-@media only screen and (max-width:770px){
-  .py-more{
-    padding-top: 10vh;
-  }
+
+.pu-5{
+  padding-top: 5vh;
 }
+
 .my-5{
   margin-top: 5vh;
 }
+
 .avatar{
     max-width: 15rem;
     height: auto;
     margin: 0 auto;
 }
+
 img {
     border-radius: 50%;
     border: 4px solid white;
 }
+
 .round{
     border-radius: 1%;
     border: 1rem solid white;
