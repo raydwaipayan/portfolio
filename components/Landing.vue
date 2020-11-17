@@ -73,7 +73,7 @@ export default {
 }
 
 .is-fullscreen{
-  min-height: calc(100vh - 5.5rem);
+  min-height: calc(100vh - 5rem);
 }
 
 .py-more{

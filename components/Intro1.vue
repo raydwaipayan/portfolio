@@ -47,7 +47,7 @@ export default {
 <style scoped>
 .columns {
   display: flex;
-  height: calc(100vh - 5.5rem);
+  height: calc(100vh - 5rem);
   align-self: center;
 }
 .fade-enter-active, .fade-leave-active {
