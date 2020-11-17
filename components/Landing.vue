@@ -77,7 +77,7 @@ export default {
 }
 
 .py-more{
-  padding-top: 16vh;
+  padding-top: 10vh;
 }
 
 .pu-5{
