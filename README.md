@@ -1,6 +1,8 @@
-# portfolio
+portfolio
+---------
 
-> Personal portfolio site
+Personal portflio application written in Nuxt.
+Uses Buefy css framework.
 
 ## Build Setup
 
