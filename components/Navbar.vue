@@ -31,7 +31,7 @@
       <b-navbar-item :href="require('../assets/dwaipayan_cv.pdf')">
         Resume
       </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ path: '/blog' }">
+      <b-navbar-item href="https://raydwaipayan.github.io/blogs">
         Blog
       </b-navbar-item>
     </template>
